@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app>
+<head>
+	<title>Formulário</title>
+	<meta charset="UTF-8">
+<script src="src/angular.min.js">
+</script>
+
+</head>
+
+<style type="text/css">
+	fieldset {
+		background-color: #eeeeee;
+	}
+
+	/* Back-end frameworks: Code igniter , cakephp, zend; */
+</style>
+
+<body>
+<div id="root"></div>
+<h1>
+<img src="imagens/imagem.png" width="50" height="50" alt="Imagem de formulário" title="Formulário">
+Formulário</h1>
+
+<form name="formcad" action="lista.php" method="post">
+
+<fieldset>
+	<legend>Dados Pessoais</legend>
+
+	<br><br>
+
+	<label for="name">Nome:</label>
+	<input type="text" id="name" name="Nome" required placeholder="Campo Obrigatório" autofocus>
+
+	<p>Sexo:
+	<br>
+	<input name="Sexo" value="1" type="radio" id="opt1">
+	<label for="opt1">Masculino</label>
+	<br>
+	<input name="Sexo" value="2" type="radio" id="opt2">
+	<label for="opt2">Feminino</label>
+	</p>
+
+	<label for="date">Data de Nascimento:</label>
+	<input type="date" id="date" name="Data de Nascimento">
+
+	<br><br>
+
+	<hr>
+
+	<br>
+
+	<label for="address">Endereço:</label>
+	<input type="text" name="Endereço" id="address" required placeholder="Campo Obrigatório">
+	<br><br>
+	<label for="number">Número:</label>
+	<input type="text" name="Numero" id="number" required placeholder="Campo Obrigatório">
+	<br><br>
+	<label for="comp">Complemento:</label>
+	<input type="text" id="comp" name="Complemento" required placeholder="Campo Obrigatório">
+
+	<br><br>
+
+	<label for="sel">Cidade:</label>
+	<select name="Cidade" id="sel">
+		<option value="1">Alvorada</option>
+		<option value="2">Canoas</option>
+		<option value="3">Esteio</option>
+		<option value="4">Gravataí</option>
+		<option value="5">Novo Hamburgo</option>
+		<option value="6">Passo Fundo</option>
+		<option value="7">Pelotas</option>
+		<option value="8">Porto Alegre</option>
+		<option value="9">São Leopoldo</option>
+	</select>
+
+	<br><br>
+
+	<label for="tel">Telefone:</label>
+	<input type="tel" id="tel" name="Telefone">
+
+	<br><br>
+
+	<label for="mail">E-mail:</label>
+	<input type="email" id="mail" name="Email" required>
+
+	<br><br>
+
+	<hr>
+
+	<p>Clique no botão abaixo para enviar os dados.</p>
+
+	<input type="submit" value="Enviar" id="botao" name="botao" onclick="loadDoc()" >
+
+	<br>
+	<br>
+
+</fieldset>
+
+</form>
+<script>
+/*
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementsByTagName("body")[0].innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "lista.php", true);
+  xhttp.send();
+}
+*/
+</script>
+
+
+
+</body>
+</html>
